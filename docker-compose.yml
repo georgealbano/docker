@@ -1,0 +1,11 @@
+version: '3'
+services:
+  service_fiberguardian:
+    build:
+      context: .
+    container_name: fiberguardian-motion-continuous-recording
+    volumes:
+      - /home/:/usr/src/app/fiberguardian_records
+      - ./fiberguardian_logs:/usr/src/app/fiberguardian_logs
+      - ../fiberguardian-nginx-rtmp-hls/hls:/usr/src/app/hls
+      - ./actives:/mnt/actives
