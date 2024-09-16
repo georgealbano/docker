@@ -1,8 +1,8 @@
 from random import randint
 import cv2
 
-URL_VIDEO = '/home/knet/George/pythonProject/Curso_Subtraction/videos/Pedestrians_2.mp4'
-
+URL_VIDEO = 'http://45.171.207.7:4333/hls/1_205.m3u8'
+print('hello word')
 
 # listas de algoritimos de rastreamento
 tracker_types = ['MIL', 'KCF', 'CSRT']

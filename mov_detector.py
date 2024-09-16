@@ -16,7 +16,7 @@ def getKernel(KERNEL_TYPE):
 
 def getFilter(img, filter):
     if filter == 'closing':
-        return cv2.morphologyEx(img, cv2.MORPH_CLOSE, getKernel('closing'), iterations=2)
+        return cv2.legacy.morphologyEx(img, cv2.MORPH_CLOSE, getKernel('closing'), iterations=2)
     if filter == 'opening':
         return cv2.morphologyEx(img, cv2.MORPH_OPEN, getKernel('opening'), iterations=2)
     if filter == 'dilation':

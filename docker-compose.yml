@@ -9,3 +9,7 @@ services:
       - ./fiberguardian_logs:/usr/src/app/fiberguardian_logs
       - ../fiberguardian-nginx-rtmp-hls/hls:/usr/src/app/hls
       - ./actives:/mnt/actives
+      - /tmp/.X11-unix:/tmp/.X11-unix 
+    environment: 
+      - DISPLAY=${DISPLAY}
+    network_mode: host
